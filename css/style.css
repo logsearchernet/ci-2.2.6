@@ -1,0 +1,520 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'arial';
+    font-size: 18px;
+    font-weight: 400;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+body {
+    background-color: #eee;
+    text-align: center
+}
+
+div.background-left {
+    display: none
+}
+@media only screen and (min-width: 992px) {
+    div.background-left {
+        position: fixed;
+        display: block;
+        top: 0px;
+        left: 0px;
+        width: 50%;
+        bottom: 0;
+        background-color: #111;
+        z-index: 1
+    }
+}
+div.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, sans-serif
+}
+div.product {
+    min-height: 100%;
+    width: 100%;
+    margin: 0 auto
+}
+@media only screen and (min-width: 992px) {
+    div.product {
+        display: -webkit-flex;
+        display: flex;
+        width: 1200px;
+        max-width: 100%
+    }
+}
+div.product div {
+    min-height: 100%
+}
+div.product div.photos {
+    background-color: #111;
+    min-height: 100%
+}
+div.product div.photos div.no-photo {
+    color: #fff;
+    padding: 150px 0
+}
+@media only screen and (min-width: 992px) {
+    div.product div.photos div.no-photo {
+        padding: 200px 0
+    }
+}
+div.product div.photos div.no-photo i.icon-product {
+    font-size: 120px;
+    color: #333
+}
+@media only screen and (min-width: 992px) {
+    div.product div.details {
+        flex: 0 0 380px;
+        margin-left: auto
+    }
+}
+div.product div.details div.float {
+    padding: 20px 20px 100px 20px;
+    text-align: left
+}
+@media only screen and (min-width: 992px) {
+    div.product div.details div.float {
+        width: 380px;
+        padding: 20px 25px 100px 25px
+    }
+}
+@media only screen and (min-width: 992px) {
+    div.product div.details div.float.fixed {
+        position: fixed;
+        bottom: 0
+    }
+}
+div.product div.details div.float h1 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    font-weight: 400
+}
+div.product div.details div.float div.description {
+    font-size: 15px;
+    line-height: 1.3em;
+    min-height: 20px;
+    color: #333
+}
+div.product img {
+    display: block;
+    width: 100%
+}
+div.product img.blank {
+    margin-bottom: -1px
+}
+form {
+    padding-top: 40px
+}
+form div.fields {
+    border-radius: 3px;
+    overflow: hidden
+}
+form label,
+form input,
+form select {
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    border-radius: 0
+}
+form label {
+    display: inline-block;
+    width: 38%;
+    text-align: right;
+    border-right: 1px solid #f5f5f5;
+    padding-right: 10px;
+    font-size: 13px;
+    color: #666
+}
+form label:last-of-type {
+    border-bottom: 0
+}
+form label.error {
+    color: #d00
+}
+form input,
+form select {
+    width: 62%;
+    padding-left: 10px;
+    font-size: 14px
+}
+form input:last-child,
+form select:last-child {
+    border-bottom: 0
+}
+form select {
+    background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC") no-repeat right 10px top 13px
+}
+form select:last-of-type {
+    height: 31px;
+    line-height: 31px;
+    margin-bottom: -1px
+}
+div.cta {
+    text-align: center;
+    padding: 10px 0px
+}
+div.cta div.price {
+    padding: 15px 0;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: -1px
+}
+div.cta div.price span {
+    font-weight: 300;
+    font-size: 28px
+}
+div.cta div.price div.shipping_fee {
+    font-size: 15px;
+    color: #999;
+    padding: 5px 0 0 0;
+    letter-spacing: 0
+}
+div.cta button {
+    border: 0;
+    display: inline-block;
+    padding: 12px 35px 10px 30px;
+    border-radius: 40px;
+    background-color: #d00;
+    color: #fff;
+    cursor: pointer
+}
+div.cta button:hover {
+    background-color: #e11
+}
+div.cta button i {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px;
+    margin: 2px 7px 0 0;
+    cursor: pointer
+}
+div.cta div.seller-info {
+    padding: 20px 0;
+    font-size: 15px;
+    color: #999
+}
+div.cta div.seller-info a {
+    font-size: 15px;
+    color: #333
+}
+div.cta div.seller-info a * {
+    font-size: 15px;
+    color: #333
+}
+div.header {
+    height: 50px;
+    background-color: #111;
+    display: none
+}
+ul.products {
+    display: inline-block;
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5px
+}
+@media only screen and (min-width: 992px) {
+    ul.products {
+        padding: 20px
+    }
+}
+ul.products li {
+    float: left;
+    width: 100%;
+    padding-bottom: 120%;
+    position: relative;
+    overflow: hidden
+}
+@media only screen and (min-width: 992px) {
+    ul.products li {
+        width: 33.33%;
+        padding-bottom: 40%
+    }
+}
+ul.products li a {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 8px -1px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    text-align: left
+}
+@media only screen and (min-width: 992px) {
+    ul.products li a {
+        left: 20px;
+        right: 20px;
+        top: 20px;
+        bottom: 20px
+    }
+}
+ul.products li a span.price {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 15px 20px
+}
+ul.products li a span.price span.name {
+    padding-top: 3px;
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis
+}
+ul.products li a img {
+    object-fit: cover;
+    position: absolute;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    z-index: 2
+}
+div.order {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.3em
+}
+@media only screen and (min-width: 992px) {
+    div.order {
+        padding: 30px 0
+    }
+}
+div.order * {
+    font-size: 15px
+}
+div.order h1 {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    padding: 30px 0;
+    font-weight: 500;
+    border-bottom: 1px solid #eee
+}
+div.order h1 i {
+    height: 50px;
+    width: 50px;
+    line-height: 52px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    background-color: #39f;
+    display: inline-block;
+    margin-bottom: 20px;
+    border-radius: 100%;
+    overflow: hidden
+}
+div.order h1 span {
+    color: #000;
+    font-size: 16px
+}
+div.order h1 span a {
+    color: #39f;
+    display: inline-block;
+    margin: 5px 0 0 0;
+    font-size: 16px
+}
+div.order div.order_inner {
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    text-align: left
+}
+@media only screen and (min-width: 992px) {
+    div.order div.order_inner {
+        margin: 0 auto;
+        width: 680px;
+        border-radius: 3px;
+        box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap
+    }
+}
+div.order div.order_inner div.billed_to {
+    padding: 20px;
+    padding-bottom: 0
+}
+@media only screen and (min-width: 992px) {
+    div.order div.order_inner div.billed_to {
+        flex: 0 0 50%;
+        margin-left: -100%;
+        padding-right: 5%
+    }
+}
+div.order div.order_inner div.order_info {
+    padding: 20px;
+    padding-bottom: 0
+}
+@media only screen and (min-width: 992px) {
+    div.order div.order_inner div.order_info {
+        flex: 0 0 50%;
+        margin-left: 50%;
+        padding-left: 5%
+    }
+}
+div.order div.order_inner div.order_details {
+    padding: 20px;
+    padding-bottom: 0
+}
+@media only screen and (min-width: 992px) {
+    div.order div.order_inner div.order_details {
+        flex: 0 0 100%
+    }
+}
+div.order div.order_inner div.payment {
+    padding: 20px;
+    border-bottom: 1px solid #eee
+}
+@media only screen and (min-width: 992px) {
+    div.order div.order_inner div.payment {
+        flex: 0 0 100%
+    }
+}
+div.order div.order_inner div.attachments {
+    text-align: center;
+    background-color: #fafafa
+}
+@media only screen and (min-width: 992px) {
+    div.order div.order_inner div.attachments {
+        flex: 0 0 100%
+    }
+}
+div.order div.order_inner div.attachments div {
+    min-height: 200px;
+    padding: 30px 25px 60px 25px;
+    color: #999
+}
+div.order div.order_inner div.attachments div span {
+    display: block;
+    color: #000;
+    font-size: 18px;
+    padding-bottom: 5px
+}
+div.order div.order_inner div.attachments input {
+    visibility: hidden;
+    height: 0;
+    width: 0
+}
+div.order div.order_inner div.attachments a {
+    position: relative;
+    display: block
+}
+div.order div.order_inner div.attachments a.attachment-upload {
+    cursor: pointer;
+    display: inline-block;
+    background-color: #39f;
+    color: #fff;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 100%
+}
+div.order div.order_inner div.attachments a.attachment-upload i {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 88px
+}
+div.order div.order_inner div.attachments a.attachment-upload:hover {
+    background-color: #28e
+}
+div.order div.order_inner div.attachments a.attachment-upload.uploading {
+    display: none
+}
+div.order div.order_inner div.attachments img {
+    display: block;
+    width: 100%
+}
+div.order div.order_inner div.attachments span[delete] {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 45px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+div.order div.order_inner div.attachments span[delete]:hover {
+    color: #fff;
+    border: 1px solid #fff
+}
+div.order div.order_inner b {
+    font-weight: 500
+}
+div.order div.order_inner table {
+    width: 100%
+}
+div.order div.order_inner table td,
+div.order div.order_inner table th {
+    padding: 5px 8px 4px 8px
+}
+div.order div.order_inner table th {
+    border-top: 1px solid #ddd;
+    background-color: #eee;
+    font-weight: 500
+}
+div.order div.order_inner table tr.row td,
+div.order div.order_inner table th {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd
+}
+div.order div.order_inner table tr.row td:first-child,
+div.order div.order_inner table th:first-child {
+    border-left: 1px solid #ddd
+}
+div.order div.order_inner table tr.row td:last-child,
+div.order div.order_inner table th:last-child {
+    text-align: right;
+    border-left: 1px solid #ddd
+}
+div.order div.order_inner table td[colspan='2'],
+div.order div.order_inner table td:last-child {
+    text-align: right
+}
+div.order div.order_inner table tr.sum td {
+    padding-top: 10px;
+    padding-bottom: 0
+}
+div.order div.order_inner table tr.sum ~ tr.sum td {
+    padding-top: 2px;
+    padding-bottom: 0
+}
